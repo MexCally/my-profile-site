@@ -20,3 +20,16 @@ Contact Form: A functional section inviting collaboration, with a form for users
 Scroll-to-top button: For smooth navigation back to the top of the page.
 
 The entire site is fully responsive and built to demonstrate both frontend skills and personal branding. It serves as my digital resume and web presence while I grow as an aspiring software engineer.
+
+Tech Stack Used:
+HTML5
+
+CSS3
+
+JavaScript (ES6)
+
+Bootstrap
+
+Font Awesome
+
+AOS (Animate On Scroll)
