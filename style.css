@@ -57,33 +57,10 @@ body {
   color: var(--text-primary);
   line-height: 1.6;
   overflow-x: hidden;
-  cursor: none;
+  cursor: default;
 }
 
 /* ===== CUSTOM CURSOR ===== */
-.cursor {
-  position: fixed;
-  width: 20px;
-  height: 20px;
-  background: var(--primary-gradient);
-  border-radius: 50%;
-  pointer-events: none;
-  z-index: 9999;
-  transition: transform 0.1s ease;
-  mix-blend-mode: difference;
-}
-
-.cursor-follower {
-  position: fixed;
-  width: 40px;
-  height: 40px;
-  border: 2px solid var(--primary-color);
-  border-radius: 50%;
-  pointer-events: none;
-  z-index: 9998;
-  transition: all 0.3s ease;
-  opacity: 0.5;
-}
 
 /* ===== SCROLL PROGRESS ===== */
 .scroll-progress {
@@ -183,6 +160,7 @@ body {
   padding: var(--section-padding);
   background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
   overflow: hidden;
+  margin-top: 80px; /* Add this to account for fixed nav */
 }
 
 .particles-container {
