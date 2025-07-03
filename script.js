@@ -9,7 +9,6 @@ class PremiumPortfolio {
   }
 
   init() {
-    this.setupLoading()
     this.setupCursor()
     this.setupScrollProgress()
     this.setupAnimations()
@@ -19,18 +18,6 @@ class PremiumPortfolio {
     this.setupScrollToTop()
     this.setupFormInteractions()
     this.setupNavigation()
-  }
-
-  // ===== LOADING SCREEN =====
-  setupLoading() {
-    window.addEventListener("load", () => {
-      const loadingScreen = document.querySelector(".loading-screen")
-      setTimeout(() => {
-        loadingScreen.style.opacity = "0"
-        loadingScreen.style.visibility = "hidden"
-        document.body.style.overflow = "visible"
-      }, 1500)
-    })
   }
 
   // ===== CUSTOM CURSOR =====
