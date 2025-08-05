@@ -39,6 +39,19 @@
   --transition-bounce: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
 
+  /* Fallback styles to ensure content is visible */
+  main {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+  }
+  
+  .hero-section {
+    display: flex !important;
+    min-height: 100vh !important;
+    padding-top: 100px !important;
+  }
+
 /* ===== RESET & BASE ===== */
 * {
   margin: 0;
