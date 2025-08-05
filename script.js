@@ -118,7 +118,7 @@ document.addEventListener("DOMContentLoaded", () => {
 })
 
 
-// Handles the Contact Form Process
+// Handles the Contact Form Submission
   const form = document.getElementById('contact-form');
   const status = document.getElementById('form-status');
 
