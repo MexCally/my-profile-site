@@ -8,6 +8,7 @@ I'm a passionate and growing full-stack developer with experience in both fronte
 
 ## Features
 The website features multiple sections:
+
 Hero Section: A brief personal introduction with a headshot and direct links to GitHub, LinkedIn, and email.
 
 About Me: A detailed background about my journey, studies, and passion for web development, including highlights from my SIWES training at Seb’s Hub.
