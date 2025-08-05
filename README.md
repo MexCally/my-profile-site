@@ -3,8 +3,11 @@ A personal portfolio website showcasing my skills, projects, and resume. Built w
 
 This is my personal portfolio website built using HTML, CSS, JavaScript, and Bootstrap. It showcases my profile, skills, and web development projects, while also providing an interactive and responsive user experience. The design reflects both professionalism and creativity, with animations powered by the AOS (Animate On Scroll) library and icons from Font Awesome.
 
-The website features multiple sections:
+## About Me
+I'm a passionate and growing full-stack developer with experience in both frontend and backend technologies. I enjoy creating responsive, user-friendly web applications and constantly learning to improve my craft. My goal is to build solutions that are both functional and impactful.
 
+## Features
+The website features multiple sections:
 Hero Section: A brief personal introduction with a headshot and direct links to GitHub, LinkedIn, and email.
 
 About Me: A detailed background about my journey, studies, and passion for web development, including highlights from my SIWES training at Seb’s Hub.
@@ -21,15 +24,11 @@ Scroll-to-top button: For smooth navigation back to the top of the page.
 
 The entire site is fully responsive and built to demonstrate both frontend skills and personal branding. It serves as my digital resume and web presence while I grow as an aspiring software engineer.
 
-Tech Stack Used:
-HTML5
+## Tech Stack Used:
+- HTML5
+- CSS3
+- JavaScript (ES6+)
+- Bootstrap
+- Font Awesome
+- AOS (Animate On Scroll Library)
 
-CSS3
-
-JavaScript (ES6)
-
-Bootstrap
-
-Font Awesome
-
-AOS (Animate On Scroll)
