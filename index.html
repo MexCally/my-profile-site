@@ -449,28 +449,27 @@
                             </div>
                         </div>
                     </div>
-                    <form class="premium-form">
+                    <form action="https://formspree.io/f/xwpqqpdk" method="POST" class="premium-form" id="contact-form">
                         <div class="form-group">
-                            <input type="text" id="name" required>
+                            <input type="text" id="name" name="name" required>
                             <label for="name">Your Name</label>
                         </div>
                         <div class="form-group">
-                            <input type="email" id="email" required>
+                            <input type="email" id="email" name="email" required>
                             <label for="email">Email Address</label>
                         </div>
                         <div class="form-group">
-                            <input type="text" id="subject" required>
+                            <input type="text" id="subject" name="subject" required>
                             <label for="subject">Subject</label>
                         </div>
                         <div class="form-group">
-                            <textarea id="message" rows="5" required></textarea>
+                            <textarea id="message" name="message" rows="5" required></textarea>
                             <label for="message">Your Message</label>
                         </div>
-                        <button type="submit" class="premium-btn primary">
-                            <span>Send Message</span>
                             <i class="fa-solid fa-paper-plane"></i>
                         </button>
                     </form>
+                    <div id="form-status" style="margin-top: 10px;"></div>
                 </div>
             </div>
         </section>
