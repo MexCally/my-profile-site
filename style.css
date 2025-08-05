@@ -902,7 +902,7 @@ body {
   font-family: var(--font-primary);
   background: transparent;
   transition: var(--transition-smooth);
-  resize: vertical;
+  resize: none;
 }
 
 .form-group input:focus,
