@@ -934,6 +934,26 @@ body {
   color: var(--primary-color);
 }
 
+.message {
+    margin-top: 15px;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 0.95rem;
+    text-align: center;
+}
+
+.message.success {
+    background-color: #e6ffed;
+    color: #2e7d32;
+    border: 1px solid #a5d6a7;
+}
+
+.message.error {
+    background-color: #ffebee;
+    color: #c62828;
+    border: 1px solid #ef9a9a;
+}
+
 /* ===== SCROLL TO TOP ===== */
 .scroll-top-btn {
   position: fixed;

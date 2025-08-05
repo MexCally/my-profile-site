@@ -118,36 +118,36 @@ document.addEventListener("DOMContentLoaded", () => {
 })
 
 
-// Handles the Contact Form Submission
-  const form = document.getElementById('contact-form');
-  const status = document.getElementById('form-status');
+// // Handles the Contact Form Submission
+//   const form = document.getElementById('contact-form');
+//   const status = document.getElementById('form-status');
 
-  form.addEventListener('submit', async (e) => {
-    e.preventDefault();
-    const data = new FormData(form);
-    const action = form.getAttribute('action');
+//   form.addEventListener('submit', async (e) => {
+//     e.preventDefault();
+//     const data = new FormData(form);
+//     const action = form.getAttribute('action');
 
-    try {
-      const response = await fetch(action, {
-        method: 'POST',
-        body: data,
-        headers: {
-          'Accept': 'application/json'
-        }
-      });
+//     try {
+//       const response = await fetch(action, {
+//         method: 'POST',
+//         body: data,
+//         headers: {
+//           'Accept': 'application/json'
+//         }
+//       });
 
-      if (response.ok) {
-        status.innerHTML = "<p style='color: green;'>Message sent successfully!</p>";
-        form.reset();
-      } else {
-        const result = await response.json();
-        if (result.errors) {
-          status.innerHTML = `<p style='color: red;'>${result.errors.map(error => error.message).join(", ")}</p>`;
-        } else {
-          status.innerHTML = "<p style='color: red;'>Oops! Something went wrong.</p>";
-        }
-      }
-    } catch (error) {
-      status.innerHTML = "<p style='color: red;'>Network error. Please try again later.</p>";
-    }
-  });
+//       if (response.ok) {
+//         status.innerHTML = "<p style='color: green;'>Message sent successfully!</p>";
+//         form.reset();
+//       } else {
+//         const result = await response.json();
+//         if (result.errors) {
+//           status.innerHTML = `<p style='color: red;'>${result.errors.map(error => error.message).join(", ")}</p>`;
+//         } else {
+//           status.innerHTML = "<p style='color: red;'>Oops! Something went wrong.</p>";
+//         }
+//       }
+//     } catch (error) {
+//       status.innerHTML = "<p style='color: red;'>Network error. Please try again later.</p>";
+//     }
+//   });
