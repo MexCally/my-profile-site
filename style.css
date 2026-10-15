@@ -515,6 +515,61 @@ body {
   font-weight: 500;
 }
 
+/* ===== EXPERIENCE & EDUCATION ===== */
+.journey-section {
+  padding: var(--section-padding);
+}
+
+.experience-section {
+  background: var(--background-primary);
+}
+
+.education-section {
+  background: var(--background-secondary);
+}
+
+.journey-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.journey-card {
+  padding: 2rem;
+  background: var(--surface);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--border-radius-lg);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+.journey-status {
+  display: inline-block;
+  margin-bottom: 1rem;
+  padding: 0.35rem 0.75rem;
+  border-radius: 20px;
+  background: rgba(102, 126, 234, 0.12);
+  color: var(--primary-color);
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.journey-card h3 {
+  margin-bottom: 0.5rem;
+  color: var(--text-primary);
+  font-size: 1.35rem;
+}
+
+.journey-organization {
+  margin-bottom: 1rem;
+  color: var(--primary-color);
+  font-weight: 600;
+}
+
+.journey-card p:not(.journey-organization) {
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
+
 /* ===== PROJECTS SECTION ===== */
 .projects-section {
   padding: var(--section-padding);
@@ -646,6 +701,16 @@ body {
   line-height: 1.8;
 }
 
+.skills-additional {
+  margin-top: 2rem;
+}
+
+.computer-skills-list {
+  padding-left: 1.25rem;
+  color: var(--text-secondary);
+  line-height: 1.8;
+}
+
 .skills-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -741,86 +806,6 @@ body {
   font-weight: 600;
   color: var(--primary-color);
   min-width: 40px;
-}
-
-/* ===== TESTIMONIAL SECTION ===== */
-.testimony-section {
-  padding: var(--section-padding);
-  background: var(--background-primary);
-}
-
-.testimonial-card {
-  max-width: 900px;
-  margin: 0 auto;
-  background: var(--glass-bg);
-  backdrop-filter: blur(20px);
-  border: 1px solid var(--glass-border);
-  border-radius: var(--border-radius-lg);
-  padding: 3rem;
-  position: relative;
-  box-shadow: var(--glass-shadow);
-}
-
-.quote-icon {
-  position: absolute;
-  top: -20px;
-  left: 3rem;
-  width: 40px;
-  height: 40px;
-  background: var(--primary-gradient);
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  font-size: 1.2rem;
-}
-
-.testimonial-text {
-  font-size: 1.2rem;
-  line-height: 1.8;
-  color: var(--text-primary);
-  margin-bottom: 2rem;
-  font-style: italic;
-}
-
-.testimonial-author {
-  display: flex;
-  align-items: center;
-  gap: 1.5rem;
-}
-
-.author-image {
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
-  overflow: hidden;
-  border: 3px solid white;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-}
-
-.author-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.author-info h4 {
-  font-size: 1.2rem;
-  font-weight: 600;
-  color: var(--text-primary);
-  margin-bottom: 0.25rem;
-}
-
-.author-info p {
-  color: var(--text-secondary);
-  margin-bottom: 0.5rem;
-}
-
-.rating {
-  display: flex;
-  gap: 0.25rem;
-  color: #fbbf24;
 }
 
 /* ===== CONTACT SECTION ===== */
@@ -934,6 +919,21 @@ body {
   color: var(--primary-color);
 }
 
+.form-status {
+  min-height: 1.5em;
+  margin-top: 1rem;
+  line-height: 1.5;
+  font-weight: 500;
+}
+
+.form-status[data-state="success"] {
+  color: #15803d;
+}
+
+.form-status[data-state="error"] {
+  color: #b42318;
+}
+
 /* ===== SCROLL TO TOP ===== */
 .scroll-top-btn {
   position: fixed;
@@ -1016,15 +1016,6 @@ body {
 
   .projects-grid {
     grid-template-columns: 1fr;
-  }
-
-  .testimonial-card {
-    padding: 2rem;
-  }
-
-  .testimonial-author {
-    flex-direction: column;
-    text-align: center;
   }
 
   .about-stats {
