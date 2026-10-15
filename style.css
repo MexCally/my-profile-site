@@ -1108,19 +1108,6 @@ body {
   transform: translateY(-5px);
 }
 
-/* ===== DARK MODE SUPPORT ===== */
-@media (prefers-color-scheme: dark) {
-  :root {
-    --text-primary: #f1f5f9;
-    --text-secondary: #94a3b8;
-    --text-light: #64748b;
-    --background-primary: #0f172a;
-    --background-secondary: #1e293b;
-    --surface: #334155;
-    --surface-elevated: #475569;
-  }
-}
-
 /* ===== FOOTER ===== */
 .footer {
   background: var(--dark-gradient);
