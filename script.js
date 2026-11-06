@@ -14,6 +14,17 @@ document.addEventListener("DOMContentLoaded", () => {
     const formStatus = document.getElementById("form-status")
     const submitButton = contactForm.querySelector('button[type="submit"]')
     const submitLabel = submitButton?.querySelector("span")
+    let formStatusTimeout
+
+    const showFormStatus = (state, message) => {
+      clearTimeout(formStatusTimeout)
+      formStatus.dataset.state = state
+      formStatus.textContent = message
+      formStatusTimeout = setTimeout(() => {
+        formStatus.textContent = ""
+        delete formStatus.dataset.state
+      }, 5000)
+    }
 
     if (formStatus && submitButton && submitLabel) {
       contactForm.addEventListener("submit", async (event) => {
@@ -27,14 +38,16 @@ document.addEventListener("DOMContentLoaded", () => {
           Boolean(accessKey && accessKey !== "YOUR_ACCESS_KEY")
 
         if (!hasConfiguredEndpoint) {
-          formStatus.dataset.state = "error"
-          formStatus.textContent =
-            "The contact form isn't set up yet. Please email me directly at emekaolisa232@gmail.com."
+          showFormStatus(
+            "error",
+            "The contact form isn't set up yet. Please email me directly at emekaolisa232@gmail.com.",
+          )
           return
         }
 
         submitButton.disabled = true
         submitLabel.textContent = "Sending..."
+        clearTimeout(formStatusTimeout)
         formStatus.textContent = ""
         delete formStatus.dataset.state
 
@@ -50,14 +63,14 @@ document.addEventListener("DOMContentLoaded", () => {
             throw new Error(result.message || `Form submission failed with status ${response.status}`)
           }
 
-          formStatus.dataset.state = "success"
-          formStatus.textContent = "Thanks for your message! I'll get back to you as soon as possible."
+          showFormStatus("success", "Thanks for your message! We'll get back to you as soon as possible.")
           contactForm.reset()
         } catch (error) {
           console.error("Unable to submit contact form:", error)
-          formStatus.dataset.state = "error"
-          formStatus.textContent =
-            "Your message couldn't be sent right now. Please try again or email me directly at emekaolisa232@gmail.com."
+          showFormStatus(
+            "error",
+            "Your message couldn't be sent right now. Please try again or email me directly at emekaolisa232@gmail.com.",
+          )
         } finally {
           submitButton.disabled = false
           submitLabel.textContent = "Send Message"
